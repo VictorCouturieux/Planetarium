@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portNames:
-  - COM5
+  - COM3
   speed: 230400
   logDebugInfos: 1
 --- !u!4 &125698360
@@ -225,86 +225,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &940563840
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 940563844}
-  - component: {fileID: 940563843}
-  - component: {fileID: 940563842}
-  - component: {fileID: 940563845}
-  m_Layer: 0
-  m_Name: tapis data
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &940563842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940563840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f66c2cce04c1f4a21a3287582dde7774, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NotifyData: 0
-  SkipFirstLine: 1
-  NotifyLines: 0
-  RememberLines: 0
-  NotifyValues: 1
-  ValuesSeparator: 9
---- !u!114 &940563843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940563840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7fb94e6c0634c8e8e8db420e0c5b4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portNames:
-  - COM5
-  speed: 230400
-  logDebugInfos: 1
---- !u!4 &940563844
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940563840}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &940563845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940563840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcd707bc0cb02204cb1d8ee6e0e8fb76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &946821932
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portNames:
-  - COM3
+  - COM4
   speed: 9600
   logDebugInfos: 1
 --- !u!4 &946821936
@@ -483,5 +403,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 2137055390}
   - {fileID: 946821936}
-  - {fileID: 940563844}
   - {fileID: 125698360}
