@@ -16,12 +16,11 @@ public class SoundData : ScriptableObject
 {
     public List<AudioClip> sound_stream = new List<AudioClip>();
     
-    [Range(-80.0f, 24.0f)] public float min_volume_db = 0.0f ;
-    [Range(-80.0f, 24.0f)] public float max_volume_db = 0.0f ;
+    [Range(0.0f, 1.0f)] public float min_volume_db = 0.0f ;
+    [Range(0.0f, 1.0f)] public float max_volume_db = 0.0f ;
     
-    
-    [Range(0.01f, 4.0f)] public float min_pitch_scale = 1.0f  ;
-    [Range(0.01f, 4.0f)] public float max_pitch_scale = 1.0f ;
+    [Range(-3f, 3f)] public float min_pitch_scale = 1.0f  ;
+    [Range(-3f, 3f)] public float max_pitch_scale = 1.0f ;
     
     public BusType bus = BusType.Master;
 
@@ -31,8 +30,8 @@ public class SoundData : ScriptableObject
 
     [FormerlySerializedAs("_currant_sound_play_list")] [HideInInspector] public int _current_sound_play_list = 0;
 
-    public SoundData() {
-        if (sound_stream.Count != 0) {
+    public void OnEnable() {
+        if (sound_stream.Count > 0) {
             current_audio_clip = sound_stream[0];
         }
     }
@@ -60,8 +59,6 @@ public class SoundData : ScriptableObject
         current_pitch_scale = Random.Range(min_pitch_scale, max_pitch_scale);
         return current_pitch_scale;
     }
-
-    
     
 }
 
