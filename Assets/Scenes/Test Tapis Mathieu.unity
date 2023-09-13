@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 946821934}
   - component: {fileID: 946821933}
   - component: {fileID: 946821937}
+  - component: {fileID: 946821938}
   m_Layer: 0
   m_Name: Arduino data
   m_TagString: Untagged
@@ -315,13 +316,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 946821932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960bc36930e46fa41969e928c304e66a, type: 3}
+  m_Script: {fileID: 11500000, guid: c10ce6f197bbcca41a8bef9d62d7f8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Button1: 0
   Button2: 0
   Button3: 0
   Button4: 0
+--- !u!114 &946821938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946821932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f8b6cb7483aa142b98adc1f75f3994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2137055387
 GameObject:
   m_ObjectHideFlags: 0
