@@ -21,12 +21,13 @@ public class Buttons : MonoBehaviour
     private int PrevButton3 ;
     private int PrevButton4 ;
 
-    public static event ButtonPushedDelegate PotentiometreMoved;
+    //public static event ButtonPushedDelegate PotentiometreMoved;
     public float InitialsoundValue = 0.5f;
     public int PotentiometreValue;
     private int PrevPotentiometreValue;
 
     private AudioSource music;
+    private bool firstTouch ;
 
     void Awake(){
         music = GetComponent<AudioSource>() ;
@@ -47,6 +48,7 @@ public class Buttons : MonoBehaviour
         PrevPotentiometreValue = 0;
 
         music.volume = InitialsoundValue;
+        firstTouch = true;
     }
 
     void OnSerialLine(string line) {
@@ -59,7 +61,7 @@ public class Buttons : MonoBehaviour
         Button3 = (int) Char.GetNumericValue(line[2]);
         Button4 = (int) Char.GetNumericValue(line[3]);
 
-        PrevPotentiometreValue =PotentiometreValue;
+        
         string PotentiometreString = line.Substring(4, line.Length - 4);
         PotentiometreValue = int.Parse(PotentiometreString);
 
@@ -84,10 +86,17 @@ public class Buttons : MonoBehaviour
             Debug.Log("Button 4 has been pushed!");
             Button4Pushed?.Invoke();
         }
-        if (PrevPotentiometreValue!=PotentiometreValue){
-            Debug.Log(string.Format("The Potentiometre has been moved to {0}!", PotentiometreValue));
-            PotentiometreMoved?.Invoke();
-            music.volume = PotentiometreValue/1023.0f;
+        if (Math.Abs(PrevPotentiometreValue-PotentiometreValue)>50){
+            PrevPotentiometreValue =PotentiometreValue;
+            if(!firstTouch){
+                Debug.Log(string.Format("The Potentiometre has been moved to {0}!", PotentiometreValue));
+                //PotentiometreMoved?.Invoke();
+                music.volume = 1-PotentiometreValue/1023.0f;
+            }
+            else{
+                firstTouch = false;
+            }
+            
         }
     }
 }
