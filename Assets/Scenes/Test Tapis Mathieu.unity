@@ -381,7 +381,7 @@ MonoBehaviour:
   Button2: 0
   Button3: 0
   Button4: 0
-  soundValue: 0.5
+  InitialsoundValue: 0.5
   PotentiometreValue: 0
 --- !u!114 &946821938
 MonoBehaviour:
@@ -412,7 +412,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ae79e450e902e4247830b1961b05fb2f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: afd40a22b91ee624896160942145caa9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
