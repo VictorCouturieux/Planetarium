@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Red Test Sptb Sound Data
   m_EditorClassIdentifier: 
   sound_stream:
-  - {fileID: 8300000, guid: 485db124fc20cae46a79773a82f11cb2, type: 3}
+  - {fileID: 8300000, guid: 35fa3d47ea8ce06428ef04f2d2ccc298, type: 3}
   min_volume_db: 0.5
   max_volume_db: 0.5
   min_pitch_scale: 1
   max_pitch_scale: 1
   bus: 0
-  current_audio_clip: {fileID: 0}
-  current_volume_db: 0
+  current_audio_clip: {fileID: 8300000, guid: 35fa3d47ea8ce06428ef04f2d2ccc298, type: 3}
+  current_volume_db: 0.5
   current_pitch_scale: 1
   _current_sound_play_list: 0
