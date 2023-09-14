@@ -55,7 +55,8 @@ public class SoundEventManager : MonoBehaviour
                 FadeOut(audio_stream, fade_duration);
             }
             else {
-                Destroy(audio_stream.gameObject, 0.5f); 
+                if (audio_stream != null) 
+                    Destroy(audio_stream.gameObject, 0.5f);
                 audio_stream.Stop();
             }
         }

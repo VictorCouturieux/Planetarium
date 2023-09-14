@@ -1,7 +1,6 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class CallSoundEvent : MonoBehaviour
 {
@@ -22,6 +21,13 @@ public class CallSoundEvent : MonoBehaviour
         Buttons.Button2Pushed += BlueButton;
         Buttons.Button3Pushed += GreenButton;
         Buttons.Button4Pushed += WhiteButton;
+    }
+
+    private void Update() {
+        if (audioStream != null && !audioStream.isPlaying) {
+            Destroy(audioStream.gameObject, 0.5f);
+            audioStream = null;
+        }
     }
 
     void RedButton() {
